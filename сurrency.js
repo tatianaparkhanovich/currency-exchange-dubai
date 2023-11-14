@@ -1,16 +1,12 @@
 const buttonExchange = document.querySelector(".button-exchange");
 console.log(buttonExchange);
 const input = document.querySelector(".sum");
-const form = document.querySelector(".form");
+const form = document.querySelector("form");
 const but = document.querySelectorAll(".but");
 const result = document.querySelectorAll(".result ");
-console.log(result);
 const currensySelectorFrom = document.querySelector(".currensy-selector-from");
-console.log(currensySelectorFrom);
 const currensySelectorTo = document.querySelector(".currensy-selector-to");
-console.log(currensySelectorTo);
 const resultSum = document.querySelector(".result-sum");
-console.log(resultSum);
 
 const convert = async () => {
   const response = await fetch(`https://open.er-api.com/v6/latest/RUB`);
