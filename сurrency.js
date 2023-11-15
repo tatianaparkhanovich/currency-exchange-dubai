@@ -1,8 +1,8 @@
 const buttonExchange = document.querySelector(".button-exchange");
-console.log(buttonExchange);
 const input = document.querySelector(".sum");
 const form = document.querySelector("form");
 const but = document.querySelectorAll(".but");
+console.log(but);
 const result = document.querySelectorAll(".result ");
 const currensySelectorFrom = document.querySelector(".currensy-selector-from");
 const currensySelectorTo = document.querySelector(".currensy-selector-to");
