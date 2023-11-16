@@ -8,14 +8,19 @@ const currensySelectorFrom = document.querySelector(".currensy-selector-from");
 const currensySelectorTo = document.querySelector(".currensy-selector-to");
 const resultSum = document.querySelector(".result-sum");
 
-const convert = async () => {
-  const response = await fetch(`https://open.er-api.com/v6/latest/RUB`);
+const convert = async (cash) => {
+  input.value = "";
+  const response = await fetch(`https://open.er-api.com/v6/latest/${cash}`);
   const data = await response.json();
   console.log(data);
   input.addEventListener("change", (e) => {
     const results = input.value;
     resultSum.textContent =
-      results * data.rates[currensySelectorTo.value].toFixed(2);
+      results * data.rates[currensySelectorTo.value].toFixed(2) + cash;
   });
 };
-convert();
+currensySelectorFrom.addEventListener("click", getCash);
+currensySelectorTo.addEventListener("click", getCash);
+function getCash(e) {
+  convert(e.target.value);
+}
