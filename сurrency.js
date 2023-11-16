@@ -16,11 +16,12 @@ const convert = async (cash) => {
   input.addEventListener("change", (e) => {
     const results = input.value;
     resultSum.textContent =
-      results * data.rates[currensySelectorTo.value].toFixed(2) + cash;
+      results * data.rates[currensySelectorFrom.value].toFixed(2) + cash;
+    results * data.rates[currensySelectorTo.value].toFixed(2) + cash;
   });
 };
-currensySelectorFrom.addEventListener("click", getCash);
-currensySelectorTo.addEventListener("click", getCash);
+currensySelectorFrom.addEventListener("change", getCash);
+currensySelectorTo.addEventListener("change", getCash);
 function getCash(e) {
   convert(e.target.value);
 }
