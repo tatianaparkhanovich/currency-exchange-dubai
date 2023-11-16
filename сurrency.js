@@ -16,9 +16,9 @@ const convert = async () => {
   console.log(data);
   input.addEventListener("change", (e) => {
     const results = input.value;
-    resultSum.textContent = (
-      results * data.rates[currensySelectorTo.value]
-    ).toFixed(2);
+    resultSum.textContent =
+      (results * data.rates[currensySelectorTo.value]).toFixed(2) +
+      currensySelectorTo.value;
   });
 };
 currensySelectorFrom.addEventListener("change", getCash);
