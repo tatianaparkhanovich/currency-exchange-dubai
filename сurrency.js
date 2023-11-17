@@ -14,13 +14,12 @@ const convert = async () => {
   );
   const data = await response.json();
   console.log(data);
-  input.addEventListener("change", (e) => {
-    const results = input.value;
-    resultSum.textContent =
-      (results * data.rates[currensySelectorTo.value]).toFixed(2) +
-      currensySelectorTo.value;
-  });
+  const results = input.value;
+  resultSum.textContent =
+    (results * data.rates[currensySelectorTo.value]).toFixed(2) +
+    currensySelectorTo.value;
 };
+input.addEventListener("change", getCash);
 currensySelectorFrom.addEventListener("change", getCash);
 currensySelectorTo.addEventListener("change", getCash);
 function getCash(e) {
