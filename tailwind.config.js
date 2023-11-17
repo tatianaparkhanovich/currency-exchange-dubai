@@ -12,8 +12,8 @@ tailwind.config = {
         blue: "#216CDE",
       },
       backgroundImage: {
-        aboutUs: "url('/src/img/aboutUs.png')",
-        hero: "url('/src/img/bg.png')",
+        aboutUs: "url('./img/aboutUs.png')",
+        hero: "url('./img/bg.png')",
       },
       boxShadow: {
         location: "0px 20px 40px 0px rgba(28, 105, 219, 0.25)",
