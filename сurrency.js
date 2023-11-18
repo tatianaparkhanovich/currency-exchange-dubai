@@ -25,3 +25,25 @@ currensySelectorTo.addEventListener("change", getCash);
 function getCash(e) {
   convert();
 }
+/*const currencyExchange = [
+  {
+    rates: "RUB",
+    rates: "AED",
+  },
+  {
+    rates: "EUR",
+    rates: "EUR",
+  },
+  {
+    rates: "USD",
+    rates: "USD",
+  },
+  {
+    rates: "PLN",
+    rates: "PLN",
+  },
+];
+currencyExchange.forEach((el) => {
+  
+});
+*/

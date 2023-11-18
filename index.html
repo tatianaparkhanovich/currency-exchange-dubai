@@ -22,7 +22,7 @@
         <header class="inline-flex font-bold">
           <nav class="w-[572px] h-[33px] mr-[368px]">
             <ul
-              class="flex justify-between text-[#333333] text-[16px] align-middle mt-[23px]"
+              class="hidden xl:flex justify-between text-[#333333] text-[16px] align-middle mt-[23px]"
             >
               <li>
                 <a href="index.html"
@@ -64,14 +64,16 @@
     </div>
     <main>
       <section class="hero h-[749px] bg-hero bg-no-repeat bg-cover">
-        <div class="container mx-auto w-[1160px] flex">
-          <div class="left pt-[176px] w-[565px]">
+        <div class="px-10 xl:px-0 xl:mx-auto w-[1160px] xl:flex">
+          <div class="left w-[264px] xl:pt-[176px] xl:w-[565px]">
             <h1
-              class="text-[#333333] font-bold text-[75px] mb-[20px] h-[162px] leading-[110%] align-text-middle"
+              class="text-[#333333] font-bold text-[35px] mt-[34px] mb-[15px] h-[90px] xl:text-[75px] xl:mb-[20px] xl:h-[162px] leading-[110%] align-text-middle"
             >
               Обмен валюты в Дубае
             </h1>
-            <p class="font-regular text-[#333333] text-[26px] mb-[36px]">
+            <p
+              class="font-regular text-[#333333] text-[16px] mb-[70px] xl:text-[26px] xl:mb-[36px]"
+            >
               Быстро и безопасно обменяем вашу валюту по выгодному курсу обмена
             </p>
             <button
@@ -91,7 +93,7 @@
               </div>
             </button>
           </div>
-          <div class="right ml-[135px]">
+          <div class="right ml-[0px] xl:ml-[135px]">
             <button
               class="but flex w-[460px] h-[77px] rounded-[20px] bg-[#E9F0FE] mt-[244px] border-[1px] border-[#DEE6F4] items-center"
             >
@@ -152,8 +154,9 @@
         class="pt-[56px] pb-[70px] bg-aboutUs bg-no-repeat bg-[length:1470px] bg-[center_top_33px]"
       >
         <div class="container relative">
-          <div class="w-[560px]">
+          <div class="w-[300px] px-10 xl:px-0 xl:w-[560px]">
             <div
+              <div
               class="absolute top-[330px] left-[700px] bg-white w-[191px] h-[151px] rounded-[20px] py-[10px] px-[20px] shadow-location"
             >
               <div class="relative text-center flex flex-col">
@@ -175,19 +178,21 @@
                 />
               </div>
             </div>
-            <h2 class="font-bold text-5xl text-main-color mb-3">О нас</h2>
-            <p class="text-lg text-main-color mb-2">
+            <h2 class="font-bold text-4xl xl:text-5xl text-main-color mb-3">
+              О нас
+            </h2>
+            <p class="text-sm xl:text-lg text-main-color mb-2">
               Компания EX-DUBAI оказывает услуги по обмену российских рублей на
               дирхам национальную валюту ОАЭ. Мы находимся в городе Дубай и
               проводим обмен валют по курсу который существенно выгоднее, чем в
               любом местном обменнике валют.
             </p>
-            <p class="text-lg text-main-color mb-2">
+            <p class="text-sm xl:text-lg text-main-color mb-2">
               Работаем в Дубае с 2019 года! За это время мы заслужили доверие
               более 100 постоянных клиентов! Наши клиенты в основном резиденты
               ОАЭ, туристы из России и Белоруссии.
             </p>
-            <p class="text-lg text-main-color mb-5">
+            <p class="text-sm xl:text-lg text-main-color mb-5">
               Для того чтобы произвести обмен рублей на наличные дирхамы или
               доллары посмотрите
               <a href="#" class="underline underline-offset-4">обменный курс</a>
@@ -198,14 +203,14 @@
               Звоните или пишите нам в месенджер Telegram забронируем
               необходимую сумму сделки и согласуем удобное время для встречи.
             </p>
-            <p class="text-sm">
+            <p class="text-xs xl:text-sm">
               Уважаемые клиенты, при обмене валют мы принимаем от Вас рубли
               только переводом на наш счет в Тинькофф, Альфабанке или Сбербанке.
               Обычно это делается через СБП или внутрибанковским переводом.
               Наличные рубли принять не сможем.
             </p>
           </div>
-          <div class="flex justify-between mt-[70px]">
+          <div class="ms:flex-col xl:flex justify-between mt-[70px]">
             <div
               class="flex flex-col bg-[#F1F6FF] gap-[18px] py-[26px] px-[40px] rounded-[20px] justify-start w-[359px]"
             >
@@ -466,7 +471,7 @@
             </h2>
           </div>
           <div
-            class="flex gap-[20px] mt-[40px] bg-[#F1F6FF] px-[12px] py-[10px] rounded-[20px] justify-between"
+            class="ms:flex-col ms:items-center xl:flex xl:gap-[20px] xl:mt-[40px] bg-[#F1F6FF] xl:px-[12px] xl:py-[10px] xl:rounded-[20px] xl:justify-between"
           >
             <div class="p-[20px] bg-white rounded-[20px] relative">
               <img
@@ -717,7 +722,10 @@
             >
             <img src="./img/eye_icon.svg" alt="" class="ml-[10px]" />
           </div>
-          <div class="pt-[140px] flex justify-between" id="calculator">
+          <div
+            class="flex-wrap xl:pt-[140px] flex xl:justify-between"
+            id="calculator"
+          >
             <div class="w-[385px] gap-[15px]">
               <h2 class="text-[50px] font-bold leading-[58px] text-main-color">
                 Калькулятор обмена
