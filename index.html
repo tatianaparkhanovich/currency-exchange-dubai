@@ -18,11 +18,11 @@
 
   <body>
     <div class="container mx-auto w-[1160px]">
-      <div class="header-wrapper absolute z-50">
+      <div class="hidden xl:inline-block header-wrapper absolute z-50">
         <header class="inline-flex font-bold">
           <nav class="w-[572px] h-[33px] mr-[368px]">
             <ul
-              class="hidden xl:flex justify-between text-[#333333] text-[16px] align-middle mt-[23px]"
+              class="flex justify-between text-[#333333] text-[16px] align-middle mt-[23px]"
             >
               <li>
                 <a href="./index.html"
@@ -36,13 +36,6 @@
               <li><a href="#current_course">Актуальный курс</a></li>
               <li><a href="#calculator">Калькулятор</a></li>
             </ul>
-            <button class="mob-menu xl:hidden sm:block">
-              <img
-                class="mr-[10px] tele ml-[20px] h-[20px] items-center"
-                src="./img/svg.png"
-                alt="burger"
-              />
-            </button>
           </nav>
           <div class="flex text-[14px] mt-[20px]">
             <a href="https://web.telegram.org/"
@@ -70,6 +63,23 @@
       </div>
     </div>
     <main>
+      <button class="mob-menu xl:hidden sm:block mt-8">
+        <img
+          class="tele ml-[130px] h-[20px] inline"
+          src="./img/telegram_footer.svg"
+          alt="burger"
+        />
+        <img
+          class="mr-[0px] tele ml-[20px] h-[20px] inline"
+          src="./img/whatsapp_footer.svg"
+          alt="burger"
+        />
+        <img
+          class="mr-[10px] tele ml-[20px] h-[20px]"
+          src="./img/svg.png"
+          alt="burger"
+        />
+      </button>
       <section class="hero h-[749px] bg-hero bg-no-repeat bg-cover">
         <div class="flex xl:px-0 xl:mx-auto w-[1160px] xl:flex">
           <div class="left w-[264px] xl:pt-[176px] xl:w-[565px]">
