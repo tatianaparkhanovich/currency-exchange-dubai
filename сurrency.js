@@ -1,9 +1,6 @@
 const buttonExchange = document.querySelector(".button-exchange");
 const input = document.querySelector(".sum");
 const form = document.querySelector("form");
-const but = document.querySelectorAll(".but");
-console.log(but);
-const result = document.querySelectorAll(".result ");
 const currensySelectorFrom = document.querySelector(".currensy-selector-from");
 const currensySelectorTo = document.querySelector(".currensy-selector-to");
 const resultSum = document.querySelector(".result-sum");
@@ -25,25 +22,26 @@ currensySelectorTo.addEventListener("change", getCash);
 function getCash(e) {
   convert();
 }
-/*const currencyExchange = [
-  {
-    rates: "RUB",
-    rates: "AED",
-  },
-  {
-    rates: "EUR",
-    rates: "EUR",
-  },
-  {
-    rates: "USD",
-    rates: "USD",
-  },
-  {
-    rates: "PLN",
-    rates: "PLN",
-  },
-];
-currencyExchange.forEach((el) => {
-  
-});
-*/
+//Текущий курс
+const courses = {};
+const elementRUB = document.querySelector("[data-value='RUB']");
+const elementUSD = document.querySelector("[data-value='USD']");
+const elementEUR = document.querySelector("[data-value='EUR']");
+const elementPLN = document.querySelector("[data-value='PLN']");
+
+getCurrencies();
+
+async function getCurrencies() {
+  const response = await fetch("https://open.er-api.com/v6/latest/AED");
+  const datas = await response.json();
+  const res = await datas;
+  courses.RUB = res.rates.RUB;
+  courses.USD = res.rates.USD;
+  courses.EUR = res.rates.EUR;
+  courses.PLN = res.rates.PLN;
+  console.log(courses);
+  elementRUB.textContent = courses.RUB.toFixed(2) + " " + "RUB";
+  elementUSD.textContent = courses.USD.toFixed(2) + " " + "USD";
+  elementEUR.textContent = courses.EUR.toFixed(2) + " " + "EUR";
+  elementPLN.textContent = courses.PLN.toFixed(2) + " " + "AED";
+}
