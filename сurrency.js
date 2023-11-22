@@ -1,6 +1,16 @@
+const bat = document.querySelector(".bat");
+const form = document.querySelector("form");
+bat.addEventListener("click", (e) => {
+  console.log(bat.addEventListener);
+  window.scrollTo({
+    top: 2200,
+    left: 0,
+    behavior: "smooth",
+  });
+});
+
 const buttonExchange = document.querySelector(".button-exchange");
 const input = document.querySelector(".sum");
-const form = document.querySelector("form");
 const currensySelectorFrom = document.querySelector(".currensy-selector-from");
 const currensySelectorTo = document.querySelector(".currensy-selector-to");
 const resultSum = document.querySelector(".result-sum");
